@@ -45,13 +45,8 @@ sidebar.addEventListener('click', function(e) {
 });
 
 // Optimize image loading for mobile
-if ('loading' in HTMLImageElement.prototype) {
-  const images = document.querySelectorAll('img[loading="lazy"]');
-  images.forEach(img => {
-    img.src = img.dataset.src;
-  });
-} else {
-  // Fallback for older browsers
+if (!('loading' in HTMLImageElement.prototype)) {
+  // Fallback for older browsers that don't support native lazy loading
   const script = document.createElement('script');
   script.src = 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver';
   document.head.appendChild(script);
