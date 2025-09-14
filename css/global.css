@@ -1,0 +1,213 @@
+body {
+      font-family: 'Outfit', sans-serif;
+      background-color: #000000;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+    .bg {
+      background: url('/assets/bgbanner.jpg') no-repeat;
+      background-size: cover;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: -3;
+    }
+    .bg:before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      opacity: 0.35;
+      z-index: -1;
+    }
+    .star-field {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      perspective: 600px;
+      z-index: -2;
+      pointer-events: none;
+    }
+    .star-field .layer { 
+      box-shadow: -411px -476px #8D99AE, 777px -407px #EDF2F4, -387px -477px #EF233C;
+      transform-style: preserve-3d;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 4px; width: 4px;
+      border-radius: 50%;
+      will-change: transform;
+      -webkit-transform-style: preserve-3d;
+    }
+    .star-field .layer:nth-child(1) { 
+      animation: fly1 5s linear infinite;
+      -webkit-animation: fly1 5s linear infinite;
+    }
+    .star-field .layer:nth-child(2) { 
+      animation: fly2 5s linear infinite;
+      -webkit-animation: fly2 5s linear infinite;
+    }
+    .star-field .layer:nth-child(3) { 
+      animation: fly3 5s linear infinite;
+      -webkit-animation: fly3 5s linear infinite;
+    }
+    @keyframes fly1 {
+      from {transform: translateZ(-600px);} 
+      to {transform: translateZ(0);} 
+    }
+    @keyframes fly2 {
+      from {transform: translateZ(-1200px);} 
+      to {transform: translateZ(-600px);} 
+    }
+    @keyframes fly3 {
+      from {transform: translateZ(-1800px);} 
+      to {transform: translateZ(-1200px);} 
+    }
+    @-webkit-keyframes fly1 {
+      from {-webkit-transform: translateZ(-600px);} 
+      to {-webkit-transform: translateZ(0);} 
+    }
+    @-webkit-keyframes fly2 {
+      from {-webkit-transform: translateZ(-1200px);} 
+      to {-webkit-transform: translateZ(-600px);} 
+    }
+    @-webkit-keyframes fly3 {
+      from {-webkit-transform: translateZ(-1800px);} 
+      to {-webkit-transform: translateZ(-1200px);} 
+    }
+    h1, h2, h3 {
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+    
+    header {
+    height: 90px;     
+    padding: 10px 20px; 
+    }
+
+    .heading-large {
+      padding-bottom: 0.2rem;
+    }
+    nav a {
+      color: #A5F3FC;
+      margin-left: 1rem;
+      font-weight: 600;
+    }
+    nav a:hover {
+      color: #F472B6;
+    }
+    #sidebar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 16rem;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.95);
+      transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transition: transform 0.3s ease;
+      -webkit-transition: -webkit-transform 0.3s ease;
+      z-index: 50;
+      will-change: transform;
+    }
+    #sidebar.open {
+      transform: translateX(0);
+      -webkit-transform: translateX(0);
+    }
+      #sidebar .header {
+      display: flex; justify-content: space-between; align-items: center;
+      border-bottom: 1px solid #444; padding-bottom: 1rem; margin-bottom: 1rem;
+      font-weight: 700; font-size: 1.5rem; color: var(--white);
+    }
+    #menu-btn{
+      color: #A5F3FC;
+    }
+       #sponsorCarousel {
+  max-width: 520px;
+  margin: 0 auto;
+}
+.carousel-container {
+  position: relative;
+  height: 280px;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure first slide is visible by default */
+.carousel-slide:first-child {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.carousel-slide.prev {
+  transform: translateX(-100%);
+}
+
+/* Larger logos with proper spacing */
+.sponsor-logo {
+  max-width: 320px;
+  max-height: 220px;
+  margin-bottom: 12px;
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tagline always below the logo, never overlayed */
+.sponsor-tagline {
+  margin-top: 10px;
+  color: #A5F3FC;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  background: none;
+  text-shadow: none;
+  position: static;
+}
+
+/* Carousel indicators */
+.carousel-indicators .indicator {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.carousel-indicators .indicator.active {
+  background-color: #22D3EE;
+}
+
+.carousel-indicators .indicator:not(.active) {
+  background-color: #9CA3AF;
+}
+
+.carousel-indicators .indicator:hover {
+  background-color: #06B6D4;
+}

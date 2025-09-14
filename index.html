@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>Genixhub – League of Geniuses</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+  <link rel="stylesheet" href="css/ios-optimizations.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="text-white font-outfit">
+
+  <div class="bg"></div>
+  <div class="star-field">
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+  </div>
+  <header class="bg-black bg-opacity-80 text-white fixed top-0 left-0 right-0 z-50 p-4 flex justify-between items-center backdrop-blur-sm">
+    <div class="flex items-center gap-3">
+      <img src="/assets/logo.png" alt="Genixhub Logo" style="width:100px; height:auto;" />
+      <span class="text-2xl font-bold text-white ml-1">Genixhub</span>
+      <img src="https://cdn-icons-png.flaticon.com/128/10597/10597864.png" alt="Icon" style="height: 32px; width: 32px; margin-left: 8px; vertical-align: middle;" />
+    </div>
+    <nav class="hidden md:flex space-x-6">
+      <a href="#">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="program.html">Program</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="prize.html">Prizes</a>
+      <a href="FAQ.html">FAQ</a>
+      <a href="sponsorship.html" class="text-cyan-200 hover:text-pink-400 font-semibold">Sponsorship</a>
+      <a href="Info.html" class="bg-gradient-to-r from-cyan-400 to-pink-500 text-black px-3 py-1 rounded">Register</a>
+    </nav>
+    <button id="menu-btn" aria-label="Open mobile menu" class="md:hidden flex items-center px-3 py-2 border rounded">
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </header>
+
+  <div id="sidebar" class="fixed top-0 right-0 w-64 h-full bg-black bg-opacity-95 transform translate-x-full transition-transform duration-300 z-50 md:hidden" aria-hidden="true">
+    <div class="p-4 flex justify-between items-center border-b border-gray-700">
+      <span class="text-xl font-bold">Menu</span>
+      <button id="close-btn" aria-label="Close mobile menu" class="text-yellow-400 text-2xl leading-none">&times;</button>
+    </div>
+    <nav class="flex flex-col p-4 space-y-4">
+      <a href="#">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="program.html">Program</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="prize.html">Prizes</a>
+      <a href="FAQ.html">FAQ</a>
+      <a href="sponsorship.html" class="text-cyan-200 hover:text-pink-400 font-semibold">Sponsorship</a>
+      <a href="Info.html" class="bg-gradient-to-r from-cyan-400 to-pink-500 text-black px-3 py-1 rounded">Register</a>
+    </nav>
+  </div>
+  <!-- Main content -->
+  <main class="relative z-10 text-center min-h-screen flex flex-col items-center justify-center space-y-16 px-6 py-20 mt-[90px]">
+       
+
+     <section>
+      <h1 class="heading-large text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500 mb-2 tracking-tight">
+        Young Genius League
+      </h1>
+      <div class="mt-0 mb-1">
+        <span class="text-base text-pink-200 italic mr-2 align-top" style="letter-spacing:1px;">powered by</span>
+        <span class="text-2xl md:text-3xl font-bold text-cyan-200 tracking-wide">Genixhub</span>
+      </div>
+    </section> <br>
+
+
+    <section>
+    <br>
+      <p class="text-2xl md:text-3xl text-pink-100 font-semibold max-w-3xl mx-auto mb-4">
+        Where the next generation of thinkers, dreamers, and innovators shape tomorrow.
+      </p><br>
+      <p class="text-lg md:text-xl text-cyan-100 font-light mb-2">
+        This is not just a competition.<br>
+        This is India’s repository of intelligence, knowledge, and imagination.<br>
+        A place where the brightest young minds step beyond classrooms and dare to solve the world’s greatest challenges.
+      </p>
+      <div class="flex flex-wrap justify-center my-8 gap-4">
+         <a href="#" class="btn-white-text btn-blue">Begin Your Journey</a>
+         <a href="#" class="btn-white-text btn-orange">Unleash Your Idea</a>
+         <a href="#" class="btn-white-text btn-green">Join the Genius League</a>
+      </div>
+    </section>
+    <div class="flex justify-center"><span class="text-cyan-300 text-4xl">⸻</span></div> <br>
+
+    <section class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-pink-400 mb-2">What We Stand For</h2><br>
+      <p class="text-lg text-cyan-100 mb-4">
+        At Genixhub, we believe that genius is not born — it is discovered, nurtured, and amplified.
+      </p>
+      <ul class="text-left mx-auto max-w-2xl text-lg md:text-xl space-y-2">
+        <li> <b>A University of Ideas</b> — where every thought matters</li>
+        <li><b>A Knowledge Repository</b> — capturing the vision of tomorrow’s leaders</li>
+        <li> <b>A Launchpad of Innovation</b> — turning dreams into discoveries</li>
+      </ul>
+      <p class="italic text-pink-200 mt-4">
+        “The future belongs to those who prepare for it today.” – Malcolm X
+      </p>
+    </section>
+    <div class="flex justify-center"><span class="text-cyan-300 text-4xl">⸻</span></div>
+
+    <section class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-pink-400 mb-2">Why Join the Young Genius League?</h2> <br>
+      <ul class="text-left mx-auto max-w-2xl text-lg md:text-xl space-y-2">
+        <li><b>For Students:</b> Recognition as pioneers of tomorrow, access to world-class mentors, and opportunities to showcase intelligence at a global stage.</li>
+        <li><b>For Schools:</b> Elevation into the circle of institutions known for cultivating brilliance.</li>
+        <li><b>For Society:</b> A movement that seeds the innovations our world desperately needs.</li>
+      </ul>
+      <p class="italic text-pink-200 mt-4">
+        “Education is the most powerful weapon which you can use to change the world.” – Nelson Mandela
+      </p>
+    </section>
+    <div class="flex justify-center"><span class="text-cyan-300 text-4xl">⸻</span></div>
+
+    <section class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-pink-400 mb-2">The Journey of Brilliance</h2><br>
+      <ol class="list-decimal text-left mx-auto max-w-2xl text-lg md:text-xl space-y-2 ml-6">
+        <li>30,000+ students contribute their boldest ideas</li>
+        <li>The Top 1,000 emerge as young visionaries</li>
+        <li>They refine and reimagine, creating innovations → Top 100 selected</li>
+        <li>These 100 are mentored, prototyped, and celebrated</li>
+        <li>5 are crowned as Champions of Genius, while 95 are honored as Exemplars of Excellence</li>
+      </ol>
+    </section>
+    <div class="flex justify-center"><span class="text-cyan-300 text-4xl">⸻</span></div>
+
+    <section class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-pink-400 mb-2">The Spirit of Innovation</h2><br>
+      <p class="text-lg md:text-xl text-cyan-100 font-light mb-2">
+        This is more than a contest. <br/>
+        This is a movement of knowledge, courage, and vision.
+      </p>
+      <p class="italic text-pink-200 mt-2">
+        “The people who are crazy enough to think they can change the world are the ones who do.” – Steve Jobs
+      </p>
+    </section>
+    <div class="flex justify-center"><span class="text-cyan-300 text-4xl">⸻</span></div>
+
+    <section class="max-w-3xl mx-auto">
+      <p class="text-2xl md:text-3xl text-pink-100 font-semibold mb-4">
+         If you believe knowledge is power, if you believe imagination is destiny, if you believe intelligence is the key to the future — then you belong here.
+      </p>
+      <div class="flex flex-wrap justify-center my-8 gap-4">
+          
+ <span class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-pink-400 mb-2">
+        Mark your calendars registrations open on 10th September. 
+      </span>
+        <a href="Info.html" class="btn-white-text btn-blue">Register Today</a>
+      </div>
+      
+    </section>
+    <section aria-label="Sponsors" class="max-w-5xl mx-auto mt-8 mb-12 px-6 text-center">
+  <div class="mb-6 text-2xl md:text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-pink-500">
+    Schools – who create young geniuses
+  </div>
+  <div id="sponsorCarousel" class="relative mx-auto overflow-hidden" style="max-width:520px;">
+    <div class="carousel-container relative">
+      <div class="carousel-slide active text-center">
+        <img src="assets/logon.png" class="sponsor-logo mx-auto" alt="ABS Global Logo" loading="lazy">
+        <div class="sponsor-tagline">Educate · Enlighten · Excel</div>
+      </div>
+      <div class="carousel-slide text-center">
+        <img src="assets/jainpublicschool-logo.png" class="sponsor-logo mx-auto" alt="Jain Public School Logo" loading="lazy">
+        <div class="sponsor-tagline">School for Leaders</div>
+      </div>
+    </div>
+    <button class="carousel-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all" onclick="prevSlide()">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+    <button class="carousel-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all" onclick="nextSlide()">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+    <div class="carousel-indicators flex justify-center mt-4 space-x-2">
+      <button class="indicator active w-3 h-3 bg-cyan-400 rounded-full" onclick="goToSlide(0)"></button>
+      <button class="indicator w-3 h-3 bg-gray-400 rounded-full" onclick="goToSlide(1)"></button>
+    </div>
+  </div>
+  </main>
+<br> <br>
+  <button id="faqTrigger" aria-label="Open chatbot">
+  <span id="faqRing"></span>
+</button>
+
+<div id="faqChatbot" role="dialog" aria-modal="true" aria-labelledby="chatHeader">
+  <div id="chatHeader">
+    Genixhub - Chat Support
+    <button class="closeBtn" aria-label="Close chat window" onclick="closeChat()">×</button>
+  </div>
+  <div id="chatBody"></div>
+</div>
+  
+  <footer class="bg-black bg-opacity-80 text-center p-6 mt-16 relative z-10" style="color:#fffffc;">
+    <p>&copy; Genixhub. All rights reserved.</p>
+    <p class="text-sm mt-2">
+      Contact: <a href="mailto:arun@genixhub.com" class="text-cyan-300">support@genixhub.in</a> <br>
+       For queries: <a href="tel:9150070204">9150070204</a> / <a href="tel:9150070205">9150070205</a>
+    </p>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+  </body>
+  </html>

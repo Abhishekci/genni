@@ -1,0 +1,230 @@
+#faqTrigger {
+  position: fixed;
+  bottom: 90px;
+  right: 32px;
+  width: 70px;
+  height: 70px;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  box-shadow: none;
+  border: none;
+}
+ #faqRing {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background:
+      conic-gradient(
+        #00d4ff, #5078a0, #8e00ff, #ff007b, #00d4ff 360deg
+      );
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    animation: spin 2s linear infinite;
+    -webkit-animation: spin 2s linear infinite;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    position: relative;
+    will-change: transform;
+  }
+#faqRing::after {
+  content: "";
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  background: #111c3d;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+@-webkit-keyframes spin {
+  0% {-webkit-transform: rotate(0deg);}
+  100% {-webkit-transform: rotate(360deg);}
+}
+
+/* Chat window */
+#faqChatbot {
+  position: fixed;
+  bottom: 130px;
+  right: 32px;
+  width: 360px;
+  height: 420px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #5d6fb1 0%, #c0c2c7 100%);
+  color: #e5e9f3;
+  font-family: 'Outfit', Arial, sans-serif;
+  font-style: normal;
+  border: 2px solid #264d99;
+  z-index: 10001;
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+}
+
+/* Header */
+#chatHeader {
+  background: linear-gradient(90deg, #2072ec 0%, #11326f 100%);
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 15px 20px;
+  border-bottom: 1px solid #264d99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.closeBtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Chat content area */
+#chatBody {
+  background: #05091e;
+  padding: 20px;
+  flex-grow: 1;
+  border-radius: 0 0 20px 20px;
+  overflow-y: auto;
+}
+
+/* Welcome Message */
+.welcomeMsg {
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 22px;
+  color: #d130ae;
+}
+
+/* Section buttons (equal size) */
+.sectionBtn {
+  width: 100%;
+  height: 48px;
+  background: linear-gradient(90deg, #2271e8 0%, #102957 100%);
+  border: 1px solid #264d99;
+  color: white;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: background 0.25s ease;
+  -webkit-transition: background 0.25s ease;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.sectionBtn:hover {
+  background: linear-gradient(90deg, #11326f 0%, #08194d 100%);
+}
+
+/* Questions (equal size with line clamp) */
+.faqQuestion {
+  width: 100%;
+  min-height: 48px;
+  background: linear-gradient(90deg, #2072ec 0%, #11326f 100%);
+  border: 1px solid #264d99;
+  color: white;
+  border-radius: 25px;
+  margin: 8px 0;
+  padding: 0 16px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: background 0.25s ease;
+  -webkit-transition: background 0.25s ease;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.faqQuestion:hover {
+  background: linear-gradient(90deg, #11326f 0%, #08194d 100%);
+}
+
+/* Answer box */
+.answerText {
+  background: #264d99;
+  color: #f2f2f2;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  margin: 18px 0;
+  white-space: pre-wrap;
+}
+
+/* Assist text */
+.assistText {
+  font-style: italic;
+  font-size: 15px;
+  margin-bottom: 20px;
+  color: #abbfff;
+  text-align: center;
+}
+
+/* Buttons */
+.answerBtn, .backBtn {
+  width: 100%;
+  height: 48px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin: 8px 0;
+  letter-spacing: 0.01em;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+.answerBtn {
+  background: #2072ec;
+  color: white;
+}
+.answerBtn:hover {
+  background: #11326f;
+}
+.backBtn {
+  background: #091089;
+  color: white;
+}
+.backBtn:hover {
+  background: #08194d;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  #faqChatbot {
+    bottom: 80px;
+    right: 20px;
+    width: 95vw;
+    height: 440px;
+  }
+  #faqTrigger {
+    bottom: 65px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+  }
+  #faqRing {
+    width: 50px;
+    height: 50px;
+  }
+}

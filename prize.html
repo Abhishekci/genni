@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Genixhub – League of Geniuses</title>
+  <link rel="stylesheet" href="css/prize.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="text-white font-outfit">
+
+  <div class="bg"></div>
+  <div class="star-field">
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+  </div>
+  <header class="bg-black bg-opacity-80 text-white fixed top-0 left-0 right-0 z-50 p-4 flex justify-between items-center backdrop-blur-sm">
+    <div class="flex items-center gap-3">
+      <img src="/assets/logo.png" alt="Genixhub Logo" style="width:100px; height:auto;">
+      <span class="text-2xl font-bold text-white ml-1">Genixhub</span>
+      <img src="https://cdn-icons-png.flaticon.com/128/10597/10597864.png" alt="Icon" style="height: 32px; width: 32px; margin-left: 8px; vertical-align: middle;" />
+    </div>
+    <nav class="hidden md:flex space-x-6">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="program.html">Program</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="prize.html">Prizes</a>
+      <a href="FAQ.html">FAQ</a>
+      <a href="sponsorship.html" class="text-cyan-200 hover:text-pink-400 font-semibold">Sponsorship</a>
+      <a href="Info.html" class="bg-gradient-to-r from-cyan-400 to-pink-500 text-black px-3 py-1 rounded">Register</a>
+    </nav>
+    <button id="menu-btn" aria-label="Open mobile menu" class="md:hidden flex items-center px-3 py-2 border rounded">
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </header>
+
+  <div id="sidebar" class="fixed top-0 right-0 w-64 h-full bg-black bg-opacity-95 transform translate-x-full transition-transform duration-300 z-50 md:hidden" aria-hidden="true">
+    <div class="p-4 flex justify-between items-center border-b border-gray-700">
+      <span class="text-xl font-bold">Menu</span>
+      <button id="close-btn" aria-label="Close mobile menu" class="text-yellow-400 text-2xl leading-none">&times;</button>
+    </div>
+    <nav class="flex flex-col p-4 space-y-4">   
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="program.html">Program</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="prize.html">Prizes</a>
+      <a href="FAQ.html">FAQ</a>
+      <a href="sponsorship.html" class="text-cyan-200 hover:text-pink-400 font-semibold">Sponsorship</a>
+      <a href="Info.html" class="bg-gradient-to-r from-cyan-400 to-pink-500 text-black px-3 py-1 rounded">Register</a>
+    </nav>
+  </div>
+
+   <main class="relative z-10 text-center min-h-screen flex flex-col items-center justify-center space-y-16 px-6 py-20 mt-[90px]">
+    <h1 class="text-5xl font-bold text-teal-500 mb-6">Celebrating Innovation</h1>
+    <p>Prizes, mentorship &amp; opportunities for young creators.</p>
+    <p class="quote">“Excellence is never an accident. It is always the result of high intention, sincere effort, and intelligent execution.” – Aristotle</p>
+    <p>At the Young Genius League powered by Genixhub, prizes are more than awards — they are symbols of recognition, gateways to opportunity, and stepping stones to global platforms.<br>
+    Every participant is honored, the Top 100 celebrated, and the Top 5 immortalized as Champions of Genius.</p> <br>
+
+    <hr><br>
+    <h2 class="text-3xl font-bold text-teal-300 mb-4">🏆 Top 5 Champions of Genius</h2>
+    <ul>
+      <li>1st Place: ₹1,00,000</li>
+      <li>2nd Place: ₹75,000</li>
+      <li>3rd Place: ₹50,000</li>
+      <li>4th Place: ₹25,000</li>
+      <li>5th Place: ₹10,000</li>
+    </ul>
+    <p><strong>Beyond cash rewards, these 5 innovators will gain:</strong></p>
+    <ul>
+      <li>Exclusive medals & trophies of excellence</li>
+      <li>Priority access to mentorship & incubation programs</li>
+      <li>Opportunities to showcase at international innovation platforms</li>
+    </ul>
+
+    <hr><br>
+    <h2 class="text-3xl font-bold text-teal-300 mb-4">🎖️ Top 100 Young Innovators</h2>
+    <ul>
+      <li>Prestigious Certificate of Excellence</li>
+      <li>Invitation to exclusive innovation workshops & global webinars</li>
+      <li>Chance to publish in youth innovation digests & journals</li>
+      <li>Access to international student networks</li>
+    </ul>
+    <span class="quote">“The important thing is not to stop questioning. Curiosity has its own reason for existing.” – Albert Einstein</span>
+
+    <hr><br>
+    <h2 class="text-3xl font-bold text-teal-300 mb-4">📜 All 30,000+ Participants</h2>
+    <ul>
+      <li>Official Certificate of Participation</li>
+      <li>Entry into India’s most prestigious youth innovation network</li>
+      <li>Recognition that sets them apart in academics, admissions, and future opportunities</li>
+    </ul>
+
+    <hr><br>
+    <h2 style="color: var(--accent-indigo)"; class="text-3xl font-bold text-teal-300 mb-4">Why These Prizes Matter</h2>
+    <p>These awards are not just acknowledgments — they are credentials of prestige, recognized by:</p>
+    <ul>
+      <li>Schools & universities across India and abroad</li>
+      <li>Mentors, industry leaders, and investors</li>
+      <li>Global conferences and academic platforms</li>
+    </ul>
+    <p><strong>🌟 Winning at the Young Genius League is more than a prize — it is a badge of genius that lasts a lifetime.</strong></p>
+
+    <hr><br>
+    <h2 class="text-3xl font-bold text-teal-300 mb-4" style="color: var(--accent-blue);">Closing Inspiration</h2>
+    <span class="quote">“Dreams are not what you see in sleep, dreams are those that don’t let you sleep.” – A. P. J. Abdul Kalam</span>
+    <p>🌟 Every student has the chance to dream, discover, and rise — and every winner becomes a torchbearer of innovation.</p>
+
+    <hr>
+    <section aria-label="Sponsors" class="max-w-5xl mx-auto mt-8 mb-12 px-6 text-center">
+  <div class="mb-6 text-2xl md:text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-pink-500">
+    Schools – who create young geniuses
+  </div>
+  <div id="sponsorCarousel" class="relative mx-auto overflow-hidden" style="max-width:520px;">
+    <div class="carousel-container relative">
+      <div class="carousel-slide active text-center">
+        <img src="assets/logon.png" class="sponsor-logo mx-auto" alt="ABS Global Logo" loading="lazy">
+        <div class="sponsor-tagline">Educate · Enlighten · Excel</div>
+      </div>
+      <div class="carousel-slide text-center">
+        <img src="assets/jainpublicschool-logo.png" class="sponsor-logo mx-auto" alt="Jain Public School Logo" loading="lazy">
+        <div class="sponsor-tagline">School for Leaders</div>
+      </div>
+    </div>
+    <button class="carousel-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all" onclick="prevSlide()">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+    <button class="carousel-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all" onclick="nextSlide()">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+    <div class="carousel-indicators flex justify-center mt-4 space-x-2">
+      <button class="indicator active w-3 h-3 bg-cyan-400 rounded-full" onclick="goToSlide(0)"></button>
+      <button class="indicator w-3 h-3 bg-gray-400 rounded-full" onclick="goToSlide(1)"></button>
+    </div>
+  </div>
+  </main>
+  <button id="faqTrigger" aria-label="Open chatbot">
+  <span id="faqRing"></span>
+</button>
+
+  <div id="faqChatbot" role="dialog" aria-modal="true" aria-labelledby="chatHeader">
+  <div id="chatHeader">
+    Genixhub - Chat Support
+    <button class="closeBtn" aria-label="Close chat window" onclick="closeChat()">×</button>
+  </div>
+  <div id="chatBody"></div>
+</div>
+    <footer class="bg-black bg-opacity-80 text-center p-6 mt-16 relative z-10" style="color:#fffffc;">
+    <p>&copy; Genixhub. All rights reserved.</p>
+    <p class="text-sm mt-2">
+      Contact: <a href="mailto:arun@genixhub.com" class="text-cyan-300">support@genixhub.in</a> <br>
+       For queries: <a href="tel:9150070204">9150070204</a> / <a href="tel:9150070205">9150070205</a>
+    </p>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+  </body>
+  </html>

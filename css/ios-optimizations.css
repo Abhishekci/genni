@@ -1,0 +1,128 @@
+/* iOS Specific Optimizations */
+
+/* Reduce motion for older devices */
+.reduce-motion * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  /* iOS Safari only styles */
+  
+  /* Fix viewport height issues */
+  .min-h-screen {
+    min-height: -webkit-fill-available;
+  }
+  
+  /* Improve scrolling performance */
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Fix input zoom on iOS */
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+  
+  /* Prevent rubber band scrolling */
+  body {
+    overscroll-behavior: none;
+  }
+  
+  /* Fix gradient rendering on iOS */
+  .bg-gradient-to-r {
+    background-attachment: scroll;
+  }
+}
+
+/* Performance optimizations for mobile */
+@media (max-width: 768px) {
+  /* Reduce star field complexity on mobile */
+  .star-field .layer {
+    box-shadow: -200px -240px #8D99AE, 400px -200px #EDF2F4, -190px -240px #EF233C;
+  }
+  
+  /* Optimize animations for mobile */
+  .star-field .layer:nth-child(1) {
+    animation-duration: 8s;
+  }
+  .star-field .layer:nth-child(2) {
+    animation-duration: 10s;
+  }
+  .star-field .layer:nth-child(3) {
+    animation-duration: 12s;
+  }
+  
+  /* Improve button touch targets */
+  .btn-white-text {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Optimize chatbot for mobile */
+  #faqChatbot {
+    border-radius: 15px;
+  }
+  
+  /* Reduce carousel complexity */
+  #sponsorCarousel .carousel-control-prev-icon,
+  #sponsorCarousel .carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* High DPI display optimizations */
+@media (-webkit-min-device-pixel-ratio: 2) {
+  .bg {
+    background-image: url('https://i.ibb.co/87GbbFP/2799006.jpg');
+    background-size: cover;
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .star-field {
+    display: none;
+  }
+  
+  #faqRing {
+    animation: none;
+  }
+}
+
+/* iOS Dark mode support */
+@media (prefers-color-scheme: dark) {
+  /* Already optimized for dark theme */
+}
+
+/* Landscape orientation fixes for iOS */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  header {
+    height: 60px;
+    padding: 5px 20px;
+  }
+  
+  main {
+    padding-top: 10px;
+  }
+  
+  #faqTrigger {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  #faqChatbot {
+    bottom: 70px;
+    height: 300px;
+  }
+}

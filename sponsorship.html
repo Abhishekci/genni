@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Young Genius League 2025 Sponsorship</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      color: white;
+      margin: 0;
+      min-height: 100vh;
+      background: #06101f;
+    }
+    .bg {
+      background-image: url('/assets/bgbanner.jpg');
+      position: fixed;
+      inset: 0;
+      z-index: -3;
+    }
+    .bg::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: -2;
+    }
+    .star-field {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      perspective: 600px;
+      z-index: -1;
+      pointer-events: none;
+    }
+    .star-field .layer {
+      box-shadow: -411px -476px #8D99AE, 777px -407px #EDF2F4, -387px -477px #EF233C;
+      position: absolute;
+      top: 50%; left: 50%;
+      height: 4px; width: 4px;
+      border-radius: 50%;
+      transform-style: preserve-3d;
+    }
+    .star-field .layer:nth-child(1) { animation: fly1 5s linear infinite; }
+    .star-field .layer:nth-child(2) { animation: fly2 5s linear infinite; }
+    .star-field .layer:nth-child(3) { animation: fly3 5s linear infinite; }
+    @keyframes fly1 { from {transform: translateZ(-600px);} to {transform: translateZ(0);} }
+    @keyframes fly2 { from {transform: translateZ(-1200px);} to {transform: translateZ(-600px);} }
+    @keyframes fly3 { from {transform: translateZ(-1800px);} to {transform: translateZ(-1200px);} }
+
+    header {
+      height: 88px;
+      padding: 0 16px;
+      background: rgba(10,17,25,0.92);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+    }
+    header .branding {
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    header .branding img.logo {
+      width: 50px; height: 50px;
+    }
+    header .branding span {
+      font-weight: 800; font-size: 2rem; color: white;
+      margin-left: 0.5rem;
+    }
+    header .branding img.icon {
+      width: 2rem; height: 2rem; margin-left: 0.5rem;
+    }
+    nav.desktop-menu {
+      justify-content: flex-end; align-items: center; gap: 1rem; display: flex;
+    }
+    nav.desktop-menu a {
+      color: #A5F3FC; font-weight: 600; text-decoration: none;
+    }
+    nav.desktop-menu a:hover {
+      color: #F472B6;
+    }
+
+    #menu-btn {
+      background: none; border: none; display: none;
+      flex-direction: column; justify-content: space-around;
+      width: 32px; height: 26px; cursor: pointer; padding: 0;
+      z-index: 21;
+    }
+    #menu-btn span {
+      display: block; width: 32px; height: 4px; background: #A5F3FC;
+      border-radius: 2px; margin-bottom: 4px; transition: all 0.3s linear;
+    }
+    @media (max-width:900px) {
+      #menu-btn { display: flex; }
+      nav.desktop-menu { display: none !important; }
+    }
+    #menu-btn.open span:nth-child(1) {
+      transform: rotate(45deg);
+      position: relative; top: 8px;
+    }
+    #menu-btn.open span:nth-child(2) { opacity: 0; }
+    #menu-btn.open span:nth-child(3) {
+      transform: rotate(-45deg);
+      position: relative; bottom: 8px;
+    }
+    #sidebarMenu {
+      position: fixed;
+      top: 0; right: 0;
+      height: 100vh;
+      width: 80vw; max-width: 300px;
+      background: rgba(10,17,25,0.98);
+      box-shadow: -2px 0 12px rgba(0,0,0,0.8);
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      z-index: 30;
+      padding: 1.5rem 1rem;
+      display: flex;
+      flex-direction: column;
+    }
+    #sidebarMenu.open {
+      transform: translateX(0);
+    }
+    #sidebarMenu nav {
+      display: flex; flex-direction: column; gap: 1.1rem; margin-top: 1.5rem;
+      font-weight: bold; font-size: 1.15rem; color: #A5F3FC;
+    }
+    #sidebarMenu nav a {
+      color: #A5F3FC; text-decoration: none;
+    }
+    #sidebarMenu nav a:hover {
+      color: #F472B6;
+    }
+    #sidebarClose {
+      background: none; border: none; font-size: 2.5rem; color: #F472B6;
+      align-self: flex-end; cursor: pointer; margin-bottom: 2rem;
+    }
+    #sidebarOverlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.4);
+      opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+      z-index: 21;
+    }
+    #sidebarOverlay.active {
+      opacity: 1; pointer-events: all;
+    }
+    main {
+      max-width: 48rem; margin: 2.5rem auto 5rem; padding: 0 1rem;
+      position: relative; z-index: 15; text-align: center;
+      background: transparent;
+    }
+    .sponsor-card {
+      background: rgba(25,25,90,0.4);
+      border: 2px solid #3b82f6;
+      border-radius: 1rem;
+      margin: 1rem auto;
+      padding: 1.5rem;
+      max-width: 420px;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .sponsor-card h4 {
+      color: #93c5fd;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .price {
+      color: #facc15;
+      font-size: 2.25rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+    }
+    /* Place overlay behind content ONLY on mobile */
+    .mobile-bottom-overlay {
+      display: none;
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      height: 64px;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 5;
+      pointer-events: none;
+    }
+    @media (max-width:900px) {
+      .mobile-bottom-overlay { display: block; }
+      main { z-index: 15; position: relative;}
+    }
+    @media (min-width:901px) {
+      .mobile-bottom-overlay { display: none !important; }
+    }
+    /* Section underlines */
+    .section-hr {
+      border-top: 4px solid #3b82f6;
+      width: 100%;
+      max-width: 720px;
+      margin: 2rem auto 2rem auto;
+      opacity: 0.95;
+    }
+    footer {
+      text-align: center; padding: 1rem 0;
+      color: #cde4f7; background: rgba(0,0,0,0.85);
+      font-size: 1rem; position: relative; z-index: 12;
+    }
+    footer a { color: #22d3ee; text-decoration: none;}
+    footer a:hover { text-decoration: underline; }
+    
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="star-field">
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+  </div>
+  <header>
+    <div class="flex items-center gap-3">
+      <img src="/assets/logo.png" alt="Genixhub Logo" style="width:100px; height:auto;">
+      <span class="text-2xl font-bold text-white ml-1">Genixhub</span>
+      <img src="https://cdn-icons-png.flaticon.com/128/10597/10597864.png" alt="Icon" style="height: 32px; width: 32px; margin-left: 8px; vertical-align: middle;" />
+    </div>
+    <nav class="desktop-menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="program.html">Program</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="prize.html">Prizes</a>
+      <a href="FAQ.html">FAQ</a>
+      <a href="sponsorship.html" style="font-weight: 700; color: #F472B6;">Sponsorship</a>
+      <a href="Info.html" style="background: linear-gradient(to right, #06b6d4, #ec4899); color: black; padding: 0.25rem 1rem; border-radius: 0.4rem; font-weight: 700;">Register</a>
+    </nav>
+    <button id="menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="sidebarMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+  <div id="sidebarOverlay"></div>
+  <aside id="sidebarMenu" aria-hidden="true">
+    <button id="sidebarClose" aria-label="Close menu">&times;</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="program.html">Program</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="prize.html">Prizes</a>
+      <a href="FAQ.html">FAQ</a>
+      <a href="sponsorship.html" style="font-weight: 700; color: #F472B6;">Sponsorship</a>
+      <a href="Info.html" style="background: linear-gradient(to right, #06b6d4, #ec4899); color: black; padding: 0.25rem 1rem; border-radius: 0.4rem; font-weight: 700;">Register</a>
+    </nav>
+  </aside>
+  <main class="relative z-10 px-4 py-12 max-w-5xl mx-auto text-center mt-[90px]">
+    <h1 class="text-5xl md:text-7xl font-extrabold text-center text-blue-400 mb-6">Young Genius League 2025</h1>
+    <h2 class="text-3xl md:text-5xl font-bold text-center text-blue-900 mb-8">Shaping the Future Through Innovation</h2>
+    <hr class="section-hr" />
+    <h3 class="text-3xl font-bold text-cyan-300 text-center mb-6">Why Sponsor Young Genius League 2025?</h3>
+    <ul class="list-disc list-inside mx-auto text-center max-w-xl space-y-4 mb-12">
+      <li><strong>Brand Visibility:</strong> Extensive exposure to a diverse and engaged audience, positioning your brand as a champion of education and innovation.</li>
+      <li><strong>Community Impact:</strong> Contribute to student development and national progress by shaping the future workforce.</li>
+      <li><strong>Strategic Networking:</strong> Connect with key education and industry decision-makers and identify future collaboration opportunities.</li>
+    </ul>
+    <hr class="section-hr" />
+    <h3 class="text-3xl font-bold text-cyan-300 text-center mb-6">Our Audience</h3>
+    <p class="text-center mb-12 max-w-xl mx-auto">
+      We bring together over <strong class="text-cyan-400">50,000 students</strong>, <strong class="text-cyan-400">parents & guardians</strong>, <strong class="text-cyan-400">startups & industrial leaders</strong>, and <strong class="text-cyan-400">educators</strong> from <strong class="text-cyan-400">1000+ schools</strong> across Chennai and surrounding districts, with a projected <strong class="text-cyan-400">10 lakh+ digital impressions</strong>.
+    </p>
+    <hr class="section-hr" />
+    <h3 class="text-3xl font-bold text-cyan-300 text-center mb-6">Sponsorship Packages</h3>
+    <div class="flex flex-col items-center space-y-8 w-full">
+      <div class="sponsor-card">
+        <h4>Title Sponsor</h4>
+        <div class="price">₹12,00,000</div>
+        <ul class="list-disc list-inside text-center space-y-1">
+          <li>Branding alongside event name across all platforms</li>
+          <li>Presence in press meet and social media shoutouts</li>
+          <li>Logo on certificates, registration forms, website, and schools</li>
+          <li>Event backdrop, banners, standees, handouts</li>
+          <li>Volunteer t-shirts and caps branding</li>
+        </ul>
+      </div>
+      <div class="sponsor-card">
+        <h4>Event Sponsor</h4>
+        <div class="price">₹8,00,000</div>
+        <ul class="list-disc list-inside text-center space-y-1">
+          <li>Presence in press meet and social media shoutouts</li>
+          <li>Brand presence at schools, website, registration forms</li>
+          <li>Backdrop, banners, standees, handouts</li>
+          <li>Logo on certificates and volunteer gear</li>
+        </ul>
+      </div>
+      <div class="sponsor-card">
+        <h4>Associate Sponsor</h4>
+        <div class="price">₹5,00,000</div>
+        <ul class="list-disc list-inside text-center space-y-1">
+          <li>Social media and YouTube exposure</li>
+          <li>Presence in schools and website</li>
+          <li>Banners, standees, certificates, handouts</li>
+          <li>Volunteer shirts and caps</li>
+        </ul>
+      </div>
+      <div class="sponsor-card">
+        <h4>Gifting Sponsor</h4>
+        <div class="price">₹2,00,000</div>
+        <ul class="list-disc list-inside text-center space-y-1">
+          <li>Social media and YouTube shoutouts</li>
+          <li>Branding on banners, standees, certificates, handouts</li>
+        </ul>
+      </div>
+      <div class="sponsor-card">
+        <h4>Advertisement Sponsor</h4>
+        <div class="price">₹2,00,000</div>
+        <ul class="list-disc list-inside text-center space-y-1">
+          <li>Social media and YouTube shoutouts</li>
+          <li>Branding on banners, standees, certificates, handouts</li>
+        </ul>
+      </div>
+      <div class="sponsor-card">
+        <h4>Stalls</h4>
+        <div class="price">₹20,000</div>
+        <ul class="list-disc list-inside text-center space-y-1">
+          <li>Event presence via stall</li>
+          <li>Branding opportunities at the venue</li>
+        </ul>
+      </div>
+    </div>
+    <hr class="section-hr" />
+    <h3 class="text-3xl font-bold text-cyan-300 text-center mb-6">Engagement Opportunities Beyond Branding</h3>
+    <ul class="list-disc list-inside mx-auto text-center max-w-xl space-y-4 mb-12">
+      <li>Host innovation challenges and contests directly engaging students</li>
+      <li>Product showcases aligned with innovation themes</li>
+      <li>Interactive activities for students and parents</li>
+      <li>Networking with 500+ principals and representatives</li>
+    </ul>
+    <hr class="section-hr" />
+    <h3 class="text-3xl font-bold text-cyan-300 text-center mb-6">Projected Impact & ROI</h3>
+    <ul class="list-disc list-inside mx-auto text-center max-w-xl space-y-4 mb-12">
+      <li>Engage over 10,00,000 families directly</li>
+      <li>Amplify brand message with estimated 15-20 lakh digital impressions</li>
+      <li>Influence over 1000 principals, educators, and schools</li>
+      <li>10:1 potential return on investment through brand visibility and community engagement</li>
+    </ul>
+    <hr class="section-hr" />
+  </main>
+  <div class="mobile-bottom-overlay"></div>
+  <footer>
+    &copy; Genixhub. All rights reserved.<br />
+    Contact: <a href="mailto:support@genixhub.in">support@genixhub.in</a>
+  </footer>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const sidebarMenu = document.getElementById('sidebarMenu');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const sidebarCloseBtn = document.getElementById('sidebarClose');
+    function openMenu() {
+      sidebarMenu.classList.add('open');
+      sidebarOverlay.classList.add('active');
+      menuBtn.classList.add('open');
+      menuBtn.setAttribute('aria-expanded', 'true');
+    }
+    function closeMenu() {
+      sidebarMenu.classList.remove('open');
+      sidebarOverlay.classList.remove('active');
+      menuBtn.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }
+    menuBtn.addEventListener('click', () => {
+      if (sidebarMenu.classList.contains('open')) closeMenu();
+      else openMenu();
+    });
+    sidebarOverlay.addEventListener('click', closeMenu);
+    sidebarCloseBtn.addEventListener('click', closeMenu);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === "Escape") closeMenu();
+    });
+
+    (function () {
+      var starFieldWidth = window.innerWidth;
+      var starFieldHeight = window.innerHeight;
+      function addStars(starFieldWidth, starFieldHeight, noOfStars) {
+        var starField = document.querySelector('.star-field');
+        for (var i = 0; i < noOfStars; i++) {
+          var star = document.createElement('div');
+          star.className = 'layer';
+          star.style.top = Math.floor(Math.random() * starFieldHeight) + 'px';
+          star.style.left = Math.floor(Math.random() * starFieldWidth) + 'px';
+          starField.appendChild(star);
+        }
+      }
+      function animateStars(starFieldWidth, speed) {
+        var starField = document.querySelector('.star-field');
+        var stars = starField.childNodes;
+        function getStarRelativeSpeed(index) {
+          if (index % 6 === 0) return 1;
+          else if (index % 9 === 0) return 2;
+          else if (index % 2 === 0) return -1;
+          else return 0;
+        }
+        setInterval(function () {
+          for (var i = 0; i < stars.length; i++) {
+            var star = stars[i];
+            if (star.classList) {
+              var currentLeft = parseInt(star.style.left, 10) || 0;
+              var leftChangeAmount = speed + getStarRelativeSpeed(i);
+              var leftDiff;
+              if (currentLeft - leftChangeAmount < 0) {
+                leftDiff = currentLeft - leftChangeAmount + starFieldWidth;
+              } else {
+                leftDiff = currentLeft - leftChangeAmount;
+              }
+              star.style.left = leftDiff + 'px';
+            }
+          }
+        }, 20);
+      }
+      addStars(starFieldWidth, starFieldHeight, 56);
+      animateStars(starFieldWidth, 2);
+    })();
+  </script>
+    <style>
+/* Chatbot Trigger */
+#faqTrigger {
+  position: fixed;
+  bottom: 90px;
+  right: 32px;
+  width: 70px;
+  height: 70px;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  box-shadow: none;
+  border: none;
+}
+ #faqRing {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background:
+      conic-gradient(
+        #00d4ff, #5078a0, #8e00ff, #ff007b, #00d4ff 360deg
+      );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: spin 2s linear infinite;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    position: relative;
+  }
+#faqRing::after {
+  content: "";
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  background: #111c3d;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+/* Chat window */
+#faqChatbot {
+  position: fixed;
+  bottom: 130px;
+  right: 32px;
+  width: 360px;
+  height: 420px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #5d6fb1 0%, #c0c2c7 100%);
+  color: #e5e9f3;
+  font-family: 'Outfit', Arial, sans-serif;
+  font-style: normal;
+  border: 2px solid #264d99;
+  z-index: 10001;
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+}
+
+/* Header */
+#chatHeader {
+  background: linear-gradient(90deg, #2072ec 0%, #11326f 100%);
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 15px 20px;
+  border-bottom: 1px solid #264d99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.closeBtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Chat content area */
+#chatBody {
+  background: #05091e;
+  padding: 20px;
+  flex-grow: 1;
+  border-radius: 0 0 20px 20px;
+  overflow-y: auto;
+}
+
+/* Welcome Message */
+.welcomeMsg {
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 22px;
+  color: #d130ae;
+}
+
+/* Section buttons (equal size) */
+.sectionBtn {
+  width: 100%;
+  height: 48px;
+  background: linear-gradient(90deg, #2271e8 0%, #102957 100%);
+  border: 1px solid #264d99;
+  color: white;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: background 0.25s ease;
+}
+.sectionBtn:hover {
+  background: linear-gradient(90deg, #11326f 0%, #08194d 100%);
+}
+
+/* Questions (equal size with line clamp) */
+.faqQuestion {
+  width: 100%;
+  min-height: 48px;
+  background: linear-gradient(90deg, #2072ec 0%, #11326f 100%);
+  border: 1px solid #264d99;
+  color: white;
+  border-radius: 25px;
+  margin: 8px 0;
+  padding: 0 16px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: background 0.25s ease;
+}
+.faqQuestion:hover {
+  background: linear-gradient(90deg, #11326f 0%, #08194d 100%);
+}
+
+/* Answer box */
+.answerText {
+  background: #264d99;
+  color: #f2f2f2;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  margin: 18px 0;
+  white-space: pre-wrap;
+}
+
+/* Assist text */
+.assistText {
+  font-style: italic;
+  font-size: 15px;
+  margin-bottom: 20px;
+  color: #abbfff;
+  text-align: center;
+}
+
+/* Buttons */
+.answerBtn, .backBtn {
+  width: 100%;
+  height: 48px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin: 8px 0;
+  letter-spacing: 0.01em;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+.answerBtn {
+  background: #2072ec;
+  color: white;
+}
+.answerBtn:hover {
+  background: #11326f;
+}
+.backBtn {
+  background: #091089;
+  color: white;
+}
+.backBtn:hover {
+  background: #08194d;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  #faqChatbot {
+    bottom: 80px;
+    right: 20px;
+    width: 95vw;
+    height: 440px;
+  }
+  #faqTrigger {
+    bottom: 65px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+  }
+  #faqRing {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+  </style>
+    <button id="faqTrigger" aria-label="Open chatbot">
+  <span id="faqRing"></span>
+</button>
+
+<div id="faqChatbot" role="dialog" aria-modal="true" aria-labelledby="chatHeader">
+  <div id="chatHeader">
+    Genixhub - Chat Support
+    <button class="closeBtn" aria-label="Close chat window" onclick="closeChat()">×</button>
+  </div>
+  <div id="chatBody"></div>
+</div>
+    <script>const chatBody = document.getElementById('chatBody');
+const faqChatbot = document.getElementById('faqChatbot');
+const faqTrigger = document.getElementById('faqTrigger');
+
+const faqSections = {
+  competition: [
+    { question: "What is the Young Genius League 2025?", answer: "Ans:\nA premier platform for Class 6-12 students to showcase innovative ideas and projects." },
+    { question: "Who can participate?", answer: "Ans:\nStudents from Class 6 to 12 from Chennai and nearby districts are welcome." },
+    { question: "What are the eligibility criteria?", answer: "Ans:\nParticipants must be enrolled in schools within Chennai, Chengalpattu, Kanchipuram, Vellore, or Thiruvallur." },
+    { question: "Are there age limits?", answer: "Ans:\nOnly students between Class 6 and Class 12 can participate." },
+    { question: "How are projects judged?", answer: "Ans:\nIndustry experts and educators evaluate projects on innovation, collaboration, and future readiness." },
+    { question: "What are the prizes?", answer: "Ans:\nWinners receive awards, recognition, and networking opportunities with industry leaders." }
+  ],
+  registration: [
+    { question: "How do I register for the competition?", answer: "Ans:\nParticipants register online via the official website by filling out the form." },
+    { question: "What information is needed <br> for registration?", answer: "Ans:\nPersonal details, school, class, project summary, and guardian consent." },
+    { question: "Can we register as a team?", answer: "Ans:\nYes, you can register as a team." },
+    { question: "Is there a registration fee?", answer: "Ans:\nYes, the fee is ₹1000 if paid before the closing date; late registration costs ₹1500." },
+    { question: "What is the registration deadline?", answer: "Ans:\nRegistrations close one month before the event date; check website for exact date." },
+    { question: "Can I edit my registration details?", answer: "Ans:\nYes, via a link sent in the confirmation email." }
+  ],
+  sponsor: [
+    { question: "Who can become a sponsor?", answer: "Ans:\nAny organization or individual interested in supporting innovation and education." },
+    { question: "What are the sponsorship packages?", answer: "Ans:\nPackages range from Title Sponsor (₹12,00,000) to Advertisement Sponsor (₹2,00,000) with various benefits." },
+    { question: "What benefits do sponsors receive?", answer: "Ans:\nBrand visibility, networking, community impact, and branding opportunities." },
+    { question: "How do sponsors apply?", answer: "Ans:\nContact Arun Kumar D. at arun@genixhub.in or call +91 98848 55616." },
+    { question: "Are there deadlines for sponsorship?", answer: "Ans:\nEarly engagement recommended; timelines shared upon inquiry." },
+    { question: "What sponsorship forms are accepted?", answer: "Ans:\nWe accept cash, products, services, and partnerships." }
+  ],
+  contact: [
+    { question: "How can I contact support?", answer: "Ans:\nEmail support@genixhub.in or call +91 98848 55616." },
+    { question: "What are your support hours?", answer: "Ans:\nMonday to Friday, 9am to 6pm IST." },
+    { question: "How quickly will I get a response?", answer: "Ans:\nTypically within 24 hours on business days." },
+    { question: "Are there social media channels for updates?", answer: "Ans:\nFollow @genixhub on Facebook, Twitter, and Instagram." },
+    { question: "Can I get help with technical issues?", answer: "Ans:\nYes, assistance is available for technical or registration issues." }
+  ]
+};
+
+let currentSection = null;
+
+function showWelcome() {
+  currentSection = null;
+  chatBody.innerHTML = `
+    <div class="welcomeMsg">Welcome young genius, how may I help you?</div>
+    <button class="sectionBtn" onclick="showSection('competition')">1. Know more about the competition</button>
+    <button class="sectionBtn" onclick="showSection('registration')">2. Help with registration process</button>
+    <button class="sectionBtn" onclick="showSection('sponsor')">3. How to become a sponsor</button>
+    <button class="sectionBtn" onclick="showSection('contact')">4. Get in touch</button>
+  `;
+}
+
+function showSection(sectionKey) {
+  currentSection = sectionKey;
+  const faqs = faqSections[sectionKey];
+  if(!faqs || faqs.length === 0) {
+    chatBody.innerHTML = `<p>No FAQs available for this section yet.</p><button class="backBtn" onclick="showWelcome()">Back</button>`;
+    return;
+  }
+  let faqHtml = '';
+  faqs.forEach((faq, idx) => {
+    faqHtml += `<button class="faqQuestion" onclick="showAnswer(${idx})">${faq.question}</button>`;
+  });
+  faqHtml += `<button class="backBtn" onclick="showWelcome()">Back</button>`;
+  chatBody.innerHTML = faqHtml;
+}
+
+function showAnswer(index) {
+  const faq = faqSections[currentSection][index];
+  chatBody.innerHTML = `
+    <button class="faqQuestion selected">${faq.question}</button>
+    <div class="answerText">${faq.answer}</div>
+    <div class="assistText">Is there anything I may assist you with?</div>
+    <button class="answerBtn" onclick="yesHandler()">Yes</button>
+    <button class="answerBtn" onclick="noHandler()">No</button>
+    <button class="backBtn" onclick="showWelcome()">Back to Main Menu</button>
+  `;
+}
+
+function yesHandler() {
+  showSection(currentSection);
+}
+
+function noHandler() {
+  chatBody.innerHTML = `
+    <div class="answerText">Thank you for chatting with us!</div>
+    <button class="backBtn" onclick="showWelcome()">Back to Main Menu</button>
+  `;
+}
+
+function openChat() {
+  faqChatbot.style.display = 'flex';
+  showWelcome();
+}
+
+function closeChat() {
+  faqChatbot.style.display = 'none';
+}
+
+faqTrigger.addEventListener('click', openChat);
+</script>
+</body>
+</html>

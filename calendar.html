@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Genixhub – League of Geniuses</title>
+  <link rel="stylesheet" href="css/calendar.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="text-white font-outfit">
+
+  <div class="bg"></div>
+  <div class="star-field">
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+  </div>
+  <header class="bg-black bg-opacity-80 text-white fixed top-0 left-0 right-0 z-50 p-4 flex justify-between items-center backdrop-blur-sm">
+    <div class="flex items-center gap-3">
+      <img src="/assets/logo.png" alt="Genixhub Logo" style="width:100px; height:auto;">
+      <span class="text-2xl font-bold text-white ml-1">Genixhub</span>
+      <img src="https://cdn-icons-png.flaticon.com/128/10597/10597864.png" alt="Icon" style="height: 32px; width: 32px; margin-left: 8px; vertical-align: middle;" />
+    </div>
+    <nav class="hidden md:flex space-x-6">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="program.html">Program</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="prize.html">Prizes</a>
+      <a href="FAQ.html">FAQ</a>
+      <a href="sponsorship.html" class="text-cyan-200 hover:text-pink-400 font-semibold">Sponsorship</a>
+      <a href="Info.html" class="bg-gradient-to-r from-cyan-400 to-pink-500 text-black px-3 py-1 rounded">Register</a>
+    </nav>
+    <button id="menu-btn" aria-label="Open mobile menu" class="md:hidden flex items-center px-3 py-2 border rounded">
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </header>
+
+  <div id="sidebar" class="fixed top-0 right-0 w-64 h-full bg-black bg-opacity-95 transform translate-x-full transition-transform duration-300 z-50 md:hidden" aria-hidden="true">
+    <div class="p-4 flex justify-between items-center border-b border-gray-700">
+      <span class="text-xl font-bold">Menu</span>
+      <button id="close-btn" aria-label="Close mobile menu" class="text-yellow-400 text-2xl leading-none">&times;</button>
+    </div>
+    <nav class="flex flex-col p-4 space-y-4">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="program.html">Program</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="prize.html">Prizes</a>
+      <a href="FAQ.html">FAQ</a>
+      <a href="sponsorship.html" class="text-cyan-200 hover:text-pink-400 font-semibold">Sponsorship</a>
+      <a href="Info.html" class="bg-gradient-to-r from-cyan-400 to-pink-500 text-black px-3 py-1 rounded">Register</a>
+    </nav>
+  </div>
+
+ <main class="relative z-10 px-4 py-12 max-w-5xl mx-auto text-center mt-[90px]">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-[#F472B6] mb-8">Introduction</h1>
+    <p class="mb-8 text-lg text-[#A5F3FC]">
+      🌟 “The best way to predict the future is to create it.” – Peter Drucker<br>
+      Every event of the Young Genius League powered by Genixhub is a milestone in discovery, innovation, and recognition.
+    </p>
+
+    <section class="section-container">
+      <h2>📅 Dates will be announced soon</h2>
+      <p>School & Student Registrations (Regular)</p>
+      <ul class="mt-2">
+        <li>Fee: ₹1,000 per student</li>
+        <li>Early registration ensures access to orientation webinars.</li>
+      </ul>
+      <a href="Info.html" class="btn-text">Register Now</a>
+    </section>
+    <section class="section-container">     
+      <h2>📅 Dates will be announced soon</h2>
+      <p>Late Registrations – Final Call</p>
+      <p>Fee: ₹1,500 per student</p>
+      <a href="Info.html" class="btn-text">Join Before Deadline</a>
+    </section>
+    <section class="section-container">
+      <h2>📅 Dates will be announced soon</h2>
+      <p>Level 1: Idea Submissions</p>
+      <p>Over 30,000 students submit one-page ideas across themes:</p>
+      <p>AI 🤖 | Space 🌌 | Sustainability 🌱 | Health 🧬 | Education 📚 | Entrepreneurship 🌍 | Agriculture 🌾 | Smart Cities 🏙️</p>
+      <blockquote>
+        <em>“Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.” – Albert Einstein</em>
+      </blockquote>
+      <a href="" class="btn-text">Submit Your Idea</a>
+    </section>
+    <section class="section-container">
+      <h2>📅 Dates will be announced soon</h2>
+      <p>Jury Evaluation – Round 1</p>
+      <p>Expert jury reviews all submissions on creativity, feasibility, and impact.</p>
+      <p>📣 October 21, 2025: Top 1,000 Finalists Announced</p>
+      <a href="" class="btn-text">See Selection Process</a>
+    </section>
+    <section class="section-container">
+      <h2>📅 Dates will be announced soon</h2>
+      <p>Level 2: Innovation Submissions (Top 1,000)</p>
+      <p>Students refine their first ideas OR propose new ones in advanced topics: Quantum Tech, Neuroscience, Green Energy, Nanotech, Global Social Models.</p>
+    </section>
+    <section class="section-container">
+      <h2>📅 Dates will be announced soon</h2>
+      <p>Jury Evaluation – Round 2</p>
+      <p>Ideas refined, judged, and the Top 100 Young Innovators Announced (Nov 21).</p>
+      <a href="" class="btn-text">Meet the Finalists</a>
+    </section>
+    <section class="section-container">
+      <h2>📅 Dates will be announced soon</h2>
+      <p>Mentorship & Prototyping (Top 100)</p>
+      <p>Finalists paired with mentors, entrepreneurs, and industry leaders.</p>
+      <p>They build prototypes, refine pitches, and prepare for the Grand Finale.</p>
+      <a href="" class="btn-text">Meet the Mentors</a>
+    </section>
+    <section class="section-container">
+      <h2>📅 Dates will be announced soon</h2>
+      <p>Final Jury Evaluation</p>
+      <p>100 prototypes reviewed → Top 5 Champions of Genius Selected.</p>
+      <p>95 honored with Certificates of Excellence.</p>
+    </section>
+    <section class="section-container">
+      <h2>📅 Dates will be announced soon – Grand Finale (Chennai)</h2>
+      <p>Celebration of Genius</p>
+      <ul>
+        <li>Prize distribution ceremony 🎖️</li>
+        <li>Recognition of Top 5 winners</li>
+        <li>Showcase of Top 100 innovations</li>
+        <li>Media, academia, and industry leaders in attendance</li>
+      </ul>
+      <a href="" class="btn-text">Attend the Grand Finale</a>
+    </section>
+    <section class="section-container">
+      <h2>📅 Dates will be announced soon – Schools & Sponsors Conclave (Chennai)</h2>
+      <p>Leadership Gathering</p>
+      <ul>
+        <li>Principals, teachers, mentors, and sponsors unite</li>
+        <li>Discussions on innovation in education</li>
+        <li>Showcase of student projects for incubation and funding</li>
+      </ul>
+      <a href="" class="btn-text">Join the Conclave</a>
+    </section>
+    <hr class="section-divider" />
+    <br />
+    <p class="text-center text-lg font-semibold" style="color:#A5F3FC;">
+      🌟 “Dreams are not what you see in sleep, dreams are those that don’t let you sleep.” – A. P. J. Abdul Kalam
+    </p>
+     <section aria-label="Sponsors" class="max-w-5xl mx-auto mt-8 mb-12 px-6 text-center">
+  <div class="mb-6 text-2xl md:text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-pink-500">
+    Schools – who create young geniuses
+  </div>
+  <div id="sponsorCarousel" class="relative mx-auto overflow-hidden" style="max-width:520px;">
+    <div class="carousel-container relative">
+      <div class="carousel-slide active text-center">
+        <img src="assets/logon.png" class="sponsor-logo mx-auto" alt="ABS Global Logo" loading="lazy">
+        <div class="sponsor-tagline">Educate · Enlighten · Excel</div>
+      </div>
+      <div class="carousel-slide text-center">
+        <img src="assets/jainpublicschool-logo.png" class="sponsor-logo mx-auto" alt="Jain Public School Logo" loading="lazy">
+        <div class="sponsor-tagline">School for Leaders</div>
+      </div>
+    </div>
+    <button class="carousel-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all" onclick="prevSlide()">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+    <button class="carousel-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all" onclick="nextSlide()">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+    <div class="carousel-indicators flex justify-center mt-4 space-x-2">
+      <button class="indicator active w-3 h-3 bg-cyan-400 rounded-full" onclick="goToSlide(0)"></button>
+      <button class="indicator w-3 h-3 bg-gray-400 rounded-full" onclick="goToSlide(1)"></button>
+    </div>
+  </div>
+  </main>
+ <button id="faqTrigger" aria-label="Open chatbot">
+  <span id="faqRing"></span>
+</button>
+
+  <div id="faqChatbot" role="dialog" aria-modal="true" aria-labelledby="chatHeader">
+  <div id="chatHeader">
+    Genixhub - Chat Support
+    <button class="closeBtn" aria-label="Close chat window" onclick="closeChat()">×</button>
+  </div>
+  <div id="chatBody"></div>
+</div>
+    <footer class="bg-black bg-opacity-80 text-center p-6 mt-16 relative z-10" style="color:#fffffc;">
+    <p>&copy; Genixhub. All rights reserved.</p>
+    <p class="text-sm mt-2">
+      Contact: <a href="mailto:arun@genixhub.com" class="text-cyan-300">support@genixhub.in</a> <br>
+       For queries: <a href="tel:9150070204">9150070204</a> / <a href="tel:9150070205">9150070205</a>
+    </p>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+  </body>
+  </html>

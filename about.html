@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Genixhub – League of Geniuses</title>
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="text-white font-outfit">
+
+  <div class="bg"></div>
+  <div class="star-field">
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+  </div>
+  <header class="bg-black bg-opacity-80 text-white fixed top-0 left-0 right-0 z-50 p-4 flex justify-between items-center backdrop-blur-sm">
+    <div class="flex items-center gap-3">
+      <img src="/assets/logo.png" alt="Genixhub Logo" style="width:100px; height:auto;">
+      <span class="text-2xl font-bold text-white ml-1">Genixhub</span>
+      <img src="https://cdn-icons-png.flaticon.com/128/10597/10597864.png" alt="Icon" style="height: 32px; width: 32px; margin-left: 8px; vertical-align: middle;" />
+    </div>
+    <nav class="hidden md:flex space-x-6">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="program.html">Program</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="prize.html">Prizes</a>
+      <a href="FAQ.html">FAQ</a>
+      <a href="sponsorship.html" class="text-cyan-200 hover:text-pink-400 font-semibold">Sponsorship</a>
+      <a href="Info.html" class="bg-gradient-to-r from-cyan-400 to-pink-500 text-black px-3 py-1 rounded">Register</a>
+    </nav>
+    <button id="menu-btn" aria-label="Open mobile menu" class="md:hidden flex items-center px-3 py-2 border rounded">
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </header>
+
+  <div id="sidebar" class="fixed top-0 right-0 w-64 h-full bg-black bg-opacity-95 transform translate-x-full transition-transform duration-300 z-50 md:hidden" aria-hidden="true">
+    <div class="p-4 flex justify-between items-center border-b border-gray-700">
+      <span class="text-xl font-bold">Menu</span>
+      <button id="close-btn" aria-label="Close mobile menu" class="text-yellow-400 text-2xl leading-none">&times;</button>
+    </div>
+    <nav class="flex flex-col p-4 space-y-4">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="program.html">Program</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="prize.html">Prizes</a>
+      <a href="FAQ.html">FAQ</a>
+      <a href="sponsorship.html" class="text-cyan-200 hover:text-pink-400 font-semibold">Sponsorship</a>
+      <a href="Info.html" class="bg-gradient-to-r from-cyan-400 to-pink-500 text-black px-3 py-1 rounded">Register</a>
+    </nav>
+  </div>
+   <main class="relative z-10 text-center min-h-screen flex flex-col items-center justify-center space-y-16 px-6 py-20 mt-[90px]">
+<section class="content max-w-4xl mx-auto py-24 px-6 text-center space-y-6" data-aos="fade-up">
+  <h1 class="text-5xl font-bold text-teal-500 mb-6">Who We Are</h1>
+  <h2 class="text-3xl italic text-pink-300 mb-6">
+    Innovation is not about age, it’s about vision — and our journey is to give young innovators the stage they deserve.
+  </h2>
+  <p class="mb-8 text-lg leading-relaxed text-gray-300">
+    At Genixhub, we believe genius has no age. We are building India’s most prestigious youth innovation movement — a platform where the brightest young minds step beyond textbooks, tackle real-world challenges, and transform their dreams into discoveries.
+  </p>
+  <p class="mb-8 text-lg leading-relaxed text-gray-300">
+    More than a program, Genixhub is a knowledge universe — a place where students, schools, mentors, and visionaries come together to create the ideas that shape tomorrow.
+  </p>
+  
+  <hr class="border-teal-500 border-2 w-24 mx-auto my-12"/>
+  
+  <h2 class="text-3xl font-bold text-teal-300 mb-4">Our Mission</h2>
+  <p class="mb-8 text-lg leading-relaxed text-gray-300">
+    To ignite curiosity, nurture creativity, and inspire bold innovation among students of Grades 6–12.<br />
+    We aim to transform classrooms into launchpads, and young learners into leaders of thought and action.
+  </p>
+  <p class="italic text-pink-300 text-lg mb-8">
+    “Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.” – Albert Einstein
+  </p>
+  
+  <hr class="border-teal-500 border-2 w-24 mx-auto my-12"/>
+  
+  <h2 class="text-3xl font-bold text-teal-300 mb-4">Our Vision</h2>
+  <p class="mb-8 text-lg leading-relaxed text-gray-300">
+    To establish Genixhub as a global stage for youth innovation — connecting students, teachers, mentors, investors, and thought leaders into one powerful network of ideas and impact.
+  </p>
+  <p class="mb-8 text-lg leading-relaxed text-gray-300">
+    Within years, we envision expanding across India and collaborating with international forums, conferences, and institutions so that every idea finds its place in the world.
+  </p>
+
+  <hr class="border-teal-500 border-2 w-24 mx-auto my-12"/>
+  
+  <h2 class="text-3xl font-bold text-teal-300 mb-4">What Makes Us Different</h2>
+  <ul class="list-disc text-left max-w-xl mx-auto text-lg leading-relaxed text-gray-300 mb-8 space-y-3">
+    <li>&#129504; <b>Prestige:</b> A league designed to be India’s most respected youth innovation platform.</li>
+    <li>&#127760; <b>Global Outlook:</b> Access to international research, competitions, and mentorship.</li>
+    <li>&#127891; <b>Educational Impact:</b> Empowering schools to be recognized as innovation hubs.</li>
+    <li>&#128640; <b>Future-Ready:</b> Opening doors to incubation, VC funding, and entrepreneurial journeys.</li>
+  </ul>
+  <p class="italic text-pink-300 text-lg mb-8">
+    “Education is the most powerful weapon which you can use to change the world.” – Nelson Mandela
+  </p>
+
+  <hr class="border-teal-500 border-2 w-24 mx-auto my-12"/>
+  
+  <h2 class="text-3xl font-bold text-teal-300 mb-4">Join the Movement</h2>
+  <p class="mb-8 text-lg leading-relaxed text-gray-300">
+    Genixhub is more than a competition — it is an invitation to be part of history.<br />
+    Whether you are a student with an idea, a school shaping innovators, or a mentor eager to guide, this is your stage.
+  </p>
+  <p class="mb-12 text-lg leading-relaxed text-gray-300 font-semibold">
+    &#127775; From classrooms to world stages, this is where ideas take flight.
+  </p>
+  <br>
+  <span class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-pink-400 mb-2">
+        Your journey starts on 10th September - don't miss the first step.
+      </span>
+
+  <div class="flex flex-wrap justify-center gap-6 max-w-xl mx-auto">
+    <a href="Info.html" class="btn-white-text btn-blue" role="button" tabindex="0" aria-label="Register Your School">
+      &#128309; Register
+    </a>
+  </div>
+</section>
+<section aria-label="Sponsors" class="max-w-5xl mx-auto mt-8 mb-12 px-6 text-center">
+  <div class="mb-6 text-2xl md:text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-pink-500">
+    Schools – who create young geniuses
+  </div>
+  <div id="sponsorCarousel" class="relative mx-auto overflow-hidden" style="max-width:520px;">
+    <div class="carousel-container relative">
+      <div class="carousel-slide active text-center">
+        <img src="assets/logon.png" class="sponsor-logo mx-auto" alt="ABS Global Logo" loading="lazy">
+        <div class="sponsor-tagline">Educate · Enlighten · Excel</div>
+      </div>
+      <div class="carousel-slide text-center">
+        <img src="assets/jainpublicschool-logo.png" class="sponsor-logo mx-auto" alt="Jain Public School Logo" loading="lazy">
+        <div class="sponsor-tagline">School for Leaders</div>
+      </div>
+    </div>
+    <button class="carousel-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all" onclick="prevSlide()">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+    <button class="carousel-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all" onclick="nextSlide()">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+    <div class="carousel-indicators flex justify-center mt-4 space-x-2">
+      <button class="indicator active w-3 h-3 bg-cyan-400 rounded-full" onclick="goToSlide(0)"></button>
+      <button class="indicator w-3 h-3 bg-gray-400 rounded-full" onclick="goToSlide(1)"></button>
+    </div>
+  </div>
+</main>
+ <button id="faqTrigger" aria-label="Open chatbot">
+  <span id="faqRing"></span>
+</button>
+
+<div id="faqChatbot" role="dialog" aria-modal="true" aria-labelledby="chatHeader">
+  <div id="chatHeader">
+    Genixhub - Chat Support
+    <button class="closeBtn" aria-label="Close chat window" onclick="closeChat()">×</button>
+  </div>
+  <div id="chatBody"></div>
+</div>
+
+<footer class="bg-black bg-opacity-80 text-center p-6 mt-16 relative z-10;">
+  <p>&copy; Genixhub. All rights reserved.</p>
+  <p class="text-sm mt-2">
+    Contact: <a href="mailto:support@genix-hub.com" class="text-cyan-300">support@genixhub.in</a> <br>
+     For queries: <a href="tel:9150070204">9150070204</a> / <a href="tel:9150070205">9150070205</a>
+  </p>
+</footer>
+ <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+  </body>
+  </html>

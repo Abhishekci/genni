@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Genixhub – League of Geniuses</title>
+  <link rel="stylesheet" href="css/program.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="text-white font-outfit">
+
+  <div class="bg"></div>
+  <div class="star-field">
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+  </div>
+  <header class="bg-black bg-opacity-80 text-white fixed top-0 left-0 right-0 z-50 p-4 flex justify-between items-center backdrop-blur-sm">
+    <div class="flex items-center gap-3">
+      <img src="/assets/logo.png" alt="Genixhub Logo" style="width:100px; height:auto;">
+      <span class="text-2xl font-bold text-white ml-1">Genixhub</span>
+      <img src="https://cdn-icons-png.flaticon.com/128/10597/10597864.png" alt="Icon" style="height: 32px; width: 32px; margin-left: 8px; vertical-align: middle;" />
+    </div>
+    <nav class="hidden md:flex space-x-6">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="program.html">Program</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="prize.html">Prizes</a>
+      <a href="FAQ.html">FAQ</a>
+      <a href="sponsorship.html" class="text-cyan-200 hover:text-pink-400 font-semibold">Sponsorship</a>
+      <a href="Info.html" class="bg-gradient-to-r from-cyan-400 to-pink-500 text-black px-3 py-1 rounded">Register</a>
+    </nav>
+    <button id="menu-btn" aria-label="Open mobile menu" class="md:hidden flex items-center px-3 py-2 border rounded">
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </header>
+
+  <div id="sidebar" class="fixed top-0 right-0 w-64 h-full bg-black bg-opacity-95 transform translate-x-full transition-transform duration-300 z-50 md:hidden" aria-hidden="true">
+    <div class="p-4 flex justify-between items-center border-b border-gray-700">
+      <span class="text-xl font-bold">Menu</span>
+      <button id="close-btn" aria-label="Close mobile menu" class="text-yellow-400 text-2xl leading-none">&times;</button>
+    </div>
+    <nav class="flex flex-col p-4 space-y-4">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="program.html">Program</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="prize.html">Prizes</a>
+      <a href="FAQ.html">FAQ</a>
+      <a href="sponsorship.html" class="text-cyan-200 hover:text-pink-400 font-semibold">Sponsorship</a>
+      <a href="Info.html" class="bg-gradient-to-r from-cyan-400 to-pink-500 text-black px-3 py-1 rounded">Register</a>
+    </nav>
+  </div>
+      
+
+ <main class="relative z-10 px-4 py-12 max-w-5xl mx-auto text-center mt-[90px]">
+    <section class="title-section">
+      <h1>The Program</h1>
+      <div class="powered-by">
+        <span class="powered">powered by</span>
+        <span class="brand">Genixhub</span>
+      </div> 
+
+        <section>
+      <h2>Introduction</h2>
+      <p><em>“The future belongs to those who prepare for it today.” – Malcolm X</em></p>
+      <p>The Young Genius League powered by Genixhub is India’s most prestigious youth innovation movement designed to unite students, teachers, mentors, industry leaders, and investors on a global stage.</p>
+      <p>This is not just a competition — it is a knowledge universe with 30,000+ students from 900+ schools.</p>
+    </section>
+
+    <section>
+      <h2>Key Benefits</h2>
+      <div class="themes">
+        <div class="theme-column">
+          <h3>For Students (Grades 6–12)</h3>
+          <ul>
+            <li>Global Exposure: Opportunities to present ideas in international competitions &amp; research forums.</li>
+            <li>Mentorship: Guidance from leading scientists, entrepreneurs, and industry leaders.</li>
+            <li>Recognition: Certificates, awards, and opportunities to be known as India’s Young Innovators.</li>
+            <li>Incubation Pathways: Potential to move towards start-ups &amp; VC funding.</li>
+          </ul>
+        </div>
+        <div class="theme-column">
+          <h3>For Schools &amp; Colleges</h3>
+          <ul>
+            <li>Prestige: Recognition as an Innovation Hub for nurturing young talent.</li>
+            <li>Admissions Growth: Showcase affiliation with a globally inspired program.</li>
+            <li>Faculty Recognition: Teachers and mentors acknowledged for guiding students.</li>
+            <li>Networking: Collaborations with industry, academia, and global institutions.</li>
+          </ul>
+        </div>
+        <div class="theme-column">
+          <h3>For Sponsors &amp; Partners</h3>
+          <ul>
+            <li>Massive Visibility: Association with 900+ schools &amp; 30,000+ students.</li>
+            <li>ROI-Driven Activations: Programs &amp; workshops that bring measurable returns.</li>
+            <li>CSR Prestige: Backing education, innovation, and youth development.</li>
+            <li>Long-Term Value: Early access to India’s brightest talent pool.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Scope of the Project</h2>
+      <p class="italic" style="text-align:center;">👉 Illustrative and non-committal — shows the global possibilities this program opens up:</p>
+      <ol>
+        <li><b>Tier-A Research Journals:</b> Nature Young Scientists, IEEE Xplore, Elsevier, Springer Innovation in Education</li>
+        <li><b>Tier-A International Conferences:</b> Google Science Fair, Intel ISEF, UNESCO-backed Student Innovation, FIRST Global Robotics</li>
+        <li><b>World-Class Platforms:</b> MIT Solve, UNICEF Global Innovation Challenge, Stockholm Junior Water Prize, Ashoka Young Changemakers</li>
+        <li><b>Funding:</b> Startup India, Atal Innovation Mission, BIRAC, Sequoia, Accel, Tiger Global, Tata Trusts, Infosys Foundation</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2 style="text-align:center; margin-bottom: 2rem;">Themes & Topics</h2>
+      <div class="themes">
+        <div class="theme-column" >
+          <p style="font-weight: bold; font-size:1.3em; text-align:center; margin-bottom:1rem;">Level 1 (30,000+ Students):</p>
+          <ul style="list-style: disc inside; font-size: 1.12em;">
+            <li>Artificial Intelligence & Robotics </li>
+            <li>Space & Astronomy </li>
+            <li>Agriculture & Food Security </li>
+            <li>Health & Biotechnology </li>
+            <li>Education & Learning Technologies </li>
+            <li>Social Innovation & Entrepreneurship </li>
+            <li>Smart Cities & Infrastructure </li>
+          </ul>
+        </div>
+        <div class="theme-column">
+          <p style="font-weight: bold; font-size:1.3em; text-align:center; margin-bottom:1rem;">Level 2 (Top 1,000 Students):</p>
+          <ul style="list-style: disc inside; font-size: 1.12em;">
+            <li>Quantum Computing & Emerging Tech</li>
+            <li>Green Energy & Waste Management</li>
+            <li>Neuroscience & Cognitive Technologies</li>
+            <li>Advanced Materials & Nanotechnology</li>
+            <li>Biotechnology for Rural India</li>
+            <li>Global Social Impact Models</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="center-section">
+      <h2>Calendar (2025)</h2>
+      <ul>
+        <li>Aug 25 – Sep 20: School & student registrations open</li>
+        <li>Sep 21 – Oct 05: Late registrations</li>
+        <li>Sep 01 – Oct 10: Level 1 Idea Submissions (30,000 students)</li>
+        <li>Oct 11 – Oct 20: Jury evaluation → Top 1,000 announced</li>
+        <li>Oct 22 – Nov 12: Level 2 Innovation Submissions</li>
+        <li>Nov 13 – Nov 20: Jury evaluation → Top 100 announced</li>
+        <li>Nov 22 – Dec 05: Prototyping & Mentorship (Top 100)</li>
+        <li>Dec 06 – Dec 10: Final Jury evaluation → Top 5 selected</li>
+        <li>Dec 13: Prize Distribution Ceremony 🎉</li>
+        <li>Dec 20: Schools & Sponsors Conclave 🤝</li>
+      </ul>
+    </section>
+
+    <section class="center-section">
+      <h2>Judging Committee</h2>
+      <ul>
+        <li>Academia: Senior professors & researchers from premier institutes</li>
+        <li>Industry Leaders: CEOs, technologists & entrepreneurs shaping industries</li>
+        <li>Scientists & Innovators: Pioneers inspiring generations of learners</li>
+        <li>Investors: VCs & incubators committed to supporting student innovation</li>
+      </ul>
+    </section>
+
+    <section style="text-align:center;">
+      <h2>Final Invitation</h2>
+      <p>🌟 The Young Genius League powered by Genixhub is not just an event.<br>
+      It is a movement of intelligence, a prestige platform, and a knowledge repository where tomorrow’s leaders are discovered today.</p>
+      <p class="italic">“Dreams are not what you see in sleep, dreams are those that don’t let you sleep.” – A. P. J. Abdul Kalam</p>
+       <h3 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-pink-400 mb-2">
+        The wait ends on 10th September 
+      </h3>
+      <div class="cta" style="margin-top:2rem;">
+        <a href="choose_registration.html" class="btn-text" style="text-decoration: underline;">Register</a>
+      </div>
+    </section>
+  <section aria-label="Sponsors" class="max-w-5xl mx-auto mt-8 mb-12 px-6 text-center">
+  <div class="mb-6 text-2xl md:text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-pink-500">
+    Schools – who create young geniuses
+  </div>
+  <div id="sponsorCarousel" class="relative mx-auto overflow-hidden" style="max-width:520px;">
+    <div class="carousel-container relative">
+      <div class="carousel-slide active text-center">
+        <img src="assets/logon.png" class="sponsor-logo mx-auto" alt="ABS Global Logo" loading="lazy">
+        <div class="sponsor-tagline">Educate · Enlighten · Excel</div>
+      </div>
+      <div class="carousel-slide text-center">
+        <img src="assets/jainpublicschool-logo.png" class="sponsor-logo mx-auto" alt="Jain Public School Logo" loading="lazy">
+        <div class="sponsor-tagline">School for Leaders</div>
+      </div>
+    </div>
+    <button class="carousel-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all" onclick="prevSlide()">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+    <button class="carousel-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all" onclick="nextSlide()">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+    <div class="carousel-indicators flex justify-center mt-4 space-x-2">
+      <button class="indicator active w-3 h-3 bg-cyan-400 rounded-full" onclick="goToSlide(0)"></button>
+      <button class="indicator w-3 h-3 bg-gray-400 rounded-full" onclick="goToSlide(1)"></button>
+    </div>
+  </div>
+</main>
+   <button id="faqTrigger" aria-label="Open chatbot">
+  <span id="faqRing"></span>
+</button>
+
+  <div id="faqChatbot" role="dialog" aria-modal="true" aria-labelledby="chatHeader">
+  <div id="chatHeader">
+    Genixhub - Chat Support
+    <button class="closeBtn" aria-label="Close chat window" onclick="closeChat()">×</button>
+  </div>
+  <div id="chatBody"></div>
+</div>
+    <footer class="bg-black bg-opacity-80 text-center p-6 mt-16 relative z-10" style="color:#fffffc;">
+    <p>&copy; Genixhub. All rights reserved.</p>
+    <p class="text-sm mt-2">
+      Contact: <a href="mailto:arun@genixhub.com" class="text-cyan-300">support@genixhub.in</a> <br>
+       For queries: <a href="tel:9150070204">9150070204</a> / <a href="tel:9150070205">9150070205</a>
+    </p>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+  </body>
+  </html>
